@@ -1,0 +1,13 @@
+.red {
+  :global(.ant-checkbox-inner) {
+    background-color: #f5222d !important;
+    border-color: #f5222d !important;
+  }
+}
+
+.green {
+  :global(.ant-checkbox-inner) {
+    background-color: #52c41a !important;
+    border-color: #52c41a !important;
+  }
+}

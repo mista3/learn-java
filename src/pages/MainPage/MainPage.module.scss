@@ -1,0 +1,45 @@
+.main_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: calc(100vh - 64px);
+  overflow: auto;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 24px;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.divider {
+  width: calc(100% - 48px);
+  min-height: 2px;
+  background-color: #d5d5d5;
+  border-radius: 6px;
+}
+
+.lecture_count {
+  text-align: end;
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: 1px solid #acacac;
+  min-width: max-content;
+  user-select: none;
+}
+
+.link_block {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 24px;
+  justify-content: center;
+  max-width: 770px;
+}

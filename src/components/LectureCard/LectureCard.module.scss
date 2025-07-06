@@ -1,0 +1,51 @@
+.lecture_card {
+  width: 130px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 100ms;
+  outline: 1px solid #3d3d3d;
+  outline-offset: -1px;
+  &:hover {
+    translate: 4px -4px;
+    box-shadow: -4px 4px #858585;
+  }
+  word-break: break-word;
+  user-select: none;
+  position: relative;
+}
+
+.top {
+  min-height: 36px;
+  padding-left: 8px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  background-color: #1677ff;
+  span {
+    color: white !important;
+  }
+}
+
+.text {
+  padding: 8px;
+  height: 60px;
+  display: block;
+}
+
+.bottom {
+  border-top: 1px dashed #3d3d3d;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 8px;
+}
+
+.hat {
+  position: absolute;
+  left: 8px;
+  bottom: 4px;
+  color: #3d3d3d;
+}

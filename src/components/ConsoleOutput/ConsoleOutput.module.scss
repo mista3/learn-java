@@ -1,0 +1,23 @@
+.console_output {
+  background-color: #3d3d3d !important;
+  padding: 16px !important;
+  border-radius: 4px !important;
+  overflow: auto;
+  margin-bottom: 14px;
+  span {
+    color: #acacac;
+  }
+  * {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: JetBrainsMono, monospace;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #606060;
+    border-radius: 8px;
+  }
+}
+
+.green {
+  color: #41945f !important;
+}

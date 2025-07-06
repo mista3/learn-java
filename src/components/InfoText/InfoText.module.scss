@@ -1,0 +1,18 @@
+.text {
+  cursor: pointer;
+  position: relative;
+  transition: all 100ms;
+  background-color: #bae0ff;
+  border-radius: 4px;
+  &:hover {
+    background-color: #d5d5d5;
+  }
+}
+
+.content {
+  max-width: 300px;
+}
+
+.info_icon {
+  margin-right: 8px;
+}

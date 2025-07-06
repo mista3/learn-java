@@ -1,0 +1,23 @@
+.header {
+  height: 64px;
+  width: 100%;
+  min-width: max-content;
+  box-shadow: 0 4px 8px -2px lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  cursor: pointer;
+  user-select: none;
+}
+
+.burger {
+  margin: 16px;
+}
+
+.burger_shadow {
+  width: 32px;
+  margin: 16px;
+}
