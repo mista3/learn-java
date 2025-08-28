@@ -8,6 +8,7 @@ import { addLectureToRead } from '../../helpers';
 import { ReactNode } from 'react';
 import { lectures } from '../../lectures';
 import { lectureMap } from '../Lectures';
+import { getLectureRoute, ROOT_PATH } from '../../router';
 
 export const LecturePage = () => {
   const [isCtrl, setCtrl] = useState(false);
@@ -34,7 +35,7 @@ export const LecturePage = () => {
     <Button
       icon={<ArrowIcon />}
       style={{ opacity: isPrev ? 1 : 0 }}
-      onClick={() => id && navigate(`/lectures/${+id - 1}`)}
+      onClick={() => id && navigate(getLectureRoute(+id - 1))}
       className={`${children ? s.desktop : s.mobile} ${isPrev ? '' : s.hidden }`}
     >
       {children}
@@ -45,7 +46,7 @@ export const LecturePage = () => {
     <Button
       icon={icon}
       style={{ opacity: isNext ? 1 : 0 }}
-      onClick={() => id && navigate(`/lectures/${+id + 1}`)}
+      onClick={() => id && navigate(getLectureRoute(+id + 1))}
       className={`${children ? s.desktop : s.mobile} ${isNext ? '' : s.hidden }`}
     >
       {children}
@@ -56,10 +57,10 @@ export const LecturePage = () => {
     setCtrl(event.ctrlKey);
     if (isCtrl && id) {
       if (isNext && event.code === 'ArrowRight') { 
-        navigate(`/lectures/${+id + 1}`)
+        navigate(getLectureRoute(+id + 1))
       }
       if (isPrev && event.code === 'ArrowLeft') { 
-        navigate(`/lectures/${+id - 1}`)
+        navigate(getLectureRoute(+id - 1))
       }
     }
   }
@@ -78,7 +79,7 @@ export const LecturePage = () => {
     <Button
       icon={<ArrowIcon />}
       size='small'
-      onClick={() => navigate('/')}
+      onClick={() => navigate(ROOT_PATH)}
       className={s.back_button}
     >
       На главную
@@ -100,7 +101,7 @@ export const LecturePage = () => {
         status="404"
         title="404"
         subTitle="Лекция не найдена"
-        extra={<Button type="primary" onClick={()=>navigate('/')}>На главную</Button>}
+        extra={<Button type="primary" onClick={()=>navigate(ROOT_PATH)}>На главную</Button>}
       />}
   </div>
 }

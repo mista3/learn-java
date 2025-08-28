@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { useMemo } from 'react';
 import { CloseIcon } from '../../assets/icons';
+import { getLectureRoute } from '../../router';
 
 export const NavDrawer = ({
   open,
@@ -27,7 +28,7 @@ export const NavDrawer = ({
     dataSource={lectures}
     renderItem={({ id: lectureId, name }) => {
       return <List.Item>
-          <Button type={currentId === `${lectureId}` ? 'primary' : 'text'} onClick={() => navigate(`/lectures/${lectureId}`)}>{lectureId}. {name}</Button>
+          <Button type={currentId === `${lectureId}` ? 'primary' : 'text'} onClick={() => navigate(getLectureRoute(lectureId))}>{lectureId}. {name}</Button>
         </List.Item>
       }
     }

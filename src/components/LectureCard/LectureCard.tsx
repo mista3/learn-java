@@ -1,6 +1,7 @@
 import { Text } from '..'
 import { HatIcon } from '../../assets/icons';
 import { getNoun } from '../../helpers';
+import { getLectureRoute } from '../../router';
 import s from './LectureCard.module.scss';
 import {
   useNavigate,
@@ -19,7 +20,7 @@ export const LectureCard = ({
   }) => {
   const navigate = useNavigate();
 
-  return <div className={s.lecture_card} onClick={() => navigate(`/lectures/${id}`)}>
+  return <div className={s.lecture_card} onClick={() => navigate(getLectureRoute(id))}>
     {read && <HatIcon className={s.hat} />}
     <div className={s.top}>
       <Text size={16}>Тема {id}</Text>

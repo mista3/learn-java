@@ -1,15 +1,17 @@
 import { ErrorPage, LecturePage, MainPage } from './pages';
 import { RouteObject } from "react-router-dom";
 
-const root = 'learn-java';
+export const ROOT_PATH = '/learn-java';
+
+export const getLectureRoute = (id:string|number) => `${ROOT_PATH}/lectures/${id}`;
 
 export const routes:RouteObject[] = [
   {
-    path: `/${root}/lectures/:id`,
+    path: `${ROOT_PATH}/lectures/:id`,
     element: <LecturePage/>
   },
   {
-    path: `/${root}/`,
+    path: ROOT_PATH,
     element: <MainPage />,
   },
   {
